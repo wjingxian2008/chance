@@ -1,4 +1,6 @@
+package com.github.wjingxian;
 
+import com.github.wjingxian.Chance;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -8,13 +10,11 @@ public class ChanceTest {
 
     Chance chanceA;
     Chance chanceB;
-    Chance chance;
 
     @Before
     public void setUp() {
         chanceA = new Chance(0.4f);
         chanceB = new Chance(0.6f);
-        chance = new Chance();
     }
 
     @Test
@@ -23,7 +23,7 @@ public class ChanceTest {
         // when
 
         // then
-        assertThat(chance.not(chanceA)).isEqualToComparingFieldByField(new Chance(1 - 0.4f));
+        assertThat(chanceA.not()).isEqualToComparingFieldByField(new Chance(1 - 0.4f));
     }
 
     @Test
@@ -32,7 +32,7 @@ public class ChanceTest {
         // when
 
         // then
-        assertThat(chance.and(chanceA, chanceB)).isEqualToComparingFieldByField(new Chance(0.4f * 0.6f));
+        assertThat(chanceA.and(chanceB)).isEqualToComparingFieldByField(new Chance(0.4f * 0.6f));
     }
 
     @Test
@@ -41,6 +41,6 @@ public class ChanceTest {
         // when
 
         // then
-        assertThat(chance.or(chanceA, chanceB)).isEqualToComparingFieldByField(new Chance(0.4f + 0.6f - 0.4f * 0.6f));
+        assertThat(chanceA.or(chanceB)).isEqualToComparingFieldByField(new Chance(0.4f + 0.6f - 0.4f * 0.6f));
     }
 }
