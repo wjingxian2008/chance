@@ -1,6 +1,5 @@
-package com.github.wjingxian;
+package com.github.wjingxian2008;
 
-import com.github.wjingxian.Chance;
 import org.junit.Before;
 import org.junit.Test;
 

@@ -1,4 +1,4 @@
-package com.github.wjingxian;
+package com.github.wjingxian2008;
 
 public class Chance {
 
