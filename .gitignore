@@ -1,0 +1,14 @@
+
+# User-specific stuff
+.idea
+
+# IntelliJ
+out/
+
+### Gradle ###
+.gradle
+gradle/
+build/
+
+### Gradle Patch ###
+**/build/
